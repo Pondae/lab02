@@ -2,7 +2,8 @@ const app = Vue.createApp({
     data() {
         return {
             cart: 0,
-            premium: true
+            premium: true,
+            details: ['Naruto', 'Bleach', 'Reborn', 'Berserk', 'Conan'],
         }
     },
     methods: {
