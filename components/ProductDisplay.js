@@ -27,6 +27,7 @@ app.component('product-display',{
             :style="{backgroundColor: variant.color}"></div>
             <button class=" button " :disabled='!inStock' 
             :class="{disabledButton: !inStock} " @click="addToCart ">Add to Cart</button>
+            <button class=" button " @click="removeFromCart ">Remove</button>
         </div>
     </div>
 </div>`,
@@ -48,6 +49,9 @@ app.component('product-display',{
     methods: {
         addToCart() {
             this.$emit('add-to-cart',)
+        },
+        removeFromCart() {
+            this.$emit('remove-from-cart',)
         },
         updateImage(variantImage) {
             this.image = variantImage

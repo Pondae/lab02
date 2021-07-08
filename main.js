@@ -9,6 +9,9 @@ const app = Vue.createApp({
     methods: {
         updateCart(count){
             this.cart.push(count);
+        },
+        removeCart(count){
+            this.cart.splice(count, 2)
         }
     },
     computed: {
