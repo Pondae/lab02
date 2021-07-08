@@ -6,6 +6,9 @@ app.component('review-form',{
         <label for="name">Name:</label>
         <input id="name" v-model="name">
 
+        <label for="question">Would you recommend this product?:</label>
+        <textarea id="question" v-model="question"></textarea>
+
         <label for="review">Review:</label>
         <textarea id="review" v-model="review"></textarea>
 
@@ -17,21 +20,27 @@ app.component('review-form',{
             <option>2</option>
             <option>1</option>
         </select>
-        <input type="submit" class="button" value="Submit" @click="addReview">
-    </form>`,
+        <input type="submit" class="button" value="Submit">
+    </form>
+    `,
     data(){
         return{
             name: '',
             review: '',
-            rating: null,
-            reviews:[]
+            question: '',
+            rating: null
         }
     },
     methods:{
         onSubmit() {
+            if( this.name === '' || this.review === '' || this.question === '' || this.rating === null){
+                alert('Review is incomplete. Please fill out every field.')
+                return
+            }
             let productReview = {
                 name: this.name,
                 review: this.review,
+                question: this.question,
                 rating: this.rating,
             }
             console.log(productReview)
@@ -39,10 +48,8 @@ app.component('review-form',{
 
             this.name = ''
             this.review = ''
+            this.question = ''
             this.rating = null
-        },
-        addReview(review){
-            this.reviews.push(review)
         }
     }
 })

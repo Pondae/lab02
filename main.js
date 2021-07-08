@@ -11,7 +11,7 @@ const app = Vue.createApp({
             this.cart.push(count);
         },
         removeCart(count){
-            this.cart.splice(count, 2)
+            this.cart.splice(count, 1)
         }
     },
     computed: {

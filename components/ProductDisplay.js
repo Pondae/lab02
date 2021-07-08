@@ -28,6 +28,8 @@ app.component('product-display',{
             <button class=" button " :disabled='!inStock' 
             :class="{disabledButton: !inStock} " @click="addToCart ">Add to Cart</button>
             <button class=" button " @click="removeFromCart ">Remove</button>
+            <review-form @review-submitted="addReview"></review-form>
+            <review-list v-if="reviews.length" :reviews="reviews"></review-list>
         </div>
     </div>
 </div>`,
@@ -43,7 +45,8 @@ app.component('product-display',{
             ],
             selectedVariant: 0,
             onSale: true,
-            count: 0
+            count: 0,
+            reviews:[]
         }
     },
     methods: {
@@ -58,6 +61,9 @@ app.component('product-display',{
         },
         updateVariant(index) {
             this.selectedVariant = index;
+        },
+        addReview(review){
+            this.reviews.push(review)
         }
     },
     computed: {

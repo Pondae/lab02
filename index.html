@@ -18,7 +18,6 @@
         <product-display @add-to-cart="updateCart" @remove-from-cart="removeCart"></product-display>
         <product-display :premium="premium"></product-display>
         <product-details :details="details"></product-details>
-        <review-form @review-submitted="addReview"></review-form>
     </div>
 
     <!-- Import Js -->
@@ -26,6 +25,7 @@
     <!-- Import Components -->
     <script src="./components/ProductDisplay.js"></script>
     <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
     <script>
         const mountedApp = app.mount('#app')
     </script>
