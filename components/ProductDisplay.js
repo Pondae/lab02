@@ -53,6 +53,9 @@ app.component('product-display',{
         },
         updateVariant(index) {
             this.selectedVariant = index;
+        },
+        addToCart() {
+            this.$emit('add-to-cart')
         }
     },
     computed: {
@@ -95,5 +98,16 @@ app.component('product-details',{
                 </ul>
             </div>
         </div>
-    </div>`
+    </div>`,
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+
+    },
+    computed: {
+
+    }
 })
