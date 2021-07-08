@@ -42,20 +42,18 @@ app.component('product-display',{
             ],
             selectedVariant: 0,
             onSale: true,
+            count: 0
         }
     },
     methods: {
         addToCart() {
-            this.cart += 1
+            this.$emit('add-to-cart',)
         },
         updateImage(variantImage) {
             this.image = variantImage
         },
         updateVariant(index) {
             this.selectedVariant = index;
-        },
-        addToCart() {
-            this.$emit('add-to-cart',this.variants[this.selectedVariant].id)
         }
     },
     computed: {
