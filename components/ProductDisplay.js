@@ -10,7 +10,7 @@ app.component('product-display',{
     `<div class="product-display">
     <div class="product-container">
         <div class="product-image">
-            <img :src="image" :disabled='!inStock' :class="{disabledButton: !inStock} ">
+            <img :src="image" :disabled='!inStock' :class="{disabledImage: !inStock} ">
         </div>
         <div class="product-info">
             <h1>{{ title }}</h1>
