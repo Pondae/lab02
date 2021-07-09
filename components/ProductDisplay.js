@@ -52,12 +52,12 @@ app.component('product-display',{
     methods: {
         addToCart() {
             if(this.variants[this.selectedVariant].quantity != 0){
-                this.$emit('add-to-cart',)
+                this.$emit('add-to-cart', this.variants[this.selectedVariant.id])
                 this.variants[this.selectedVariant].quantity = this.variants[this.selectedVariant].quantity - 1
             }
         },
         removeFromCart() {
-            this.$emit('remove-from-cart',)
+            this.$emit('remove-from-cart', this.variants[this.selectedVariant.id])
             this.variants[this.selectedVariant].quantity = this.variants[this.selectedVariant].quantity + 1
         },
         updateImage(variantImage) {
