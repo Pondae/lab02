@@ -88,7 +88,7 @@ li {
 .out-of-stock-img {
     filter: blur(8px);
     -webkit-filter: blur(8px);
-    opacity: 0.5
+    opacity: 0.5;
 }
 
 p {
