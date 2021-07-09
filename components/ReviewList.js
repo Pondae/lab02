@@ -13,7 +13,8 @@
             <li v-for="(review, index) in reviews" :key="index">
                 {{ review.name }} gave this {{ review.rating }} stars
                 <br/>---<br/>
-                {{ review.question}}
+                {{ review.question1}}
+                {{ review.question2}}
                 <br/>---<br/>
                 {{ review.review }}
                 <br/>
