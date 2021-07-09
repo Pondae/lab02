@@ -43,13 +43,6 @@ body {
     cursor: not-allowed;
 }
 
-.disabledImage {
-
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    cursor: not-allowed;
-}
-
 h1 {
     font-size: 50px;
 }
@@ -93,6 +86,8 @@ li {
 }
 
 .out-of-stock-img {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
     opacity: 0.5
 }
 
