@@ -15,9 +15,8 @@
         <div class="nav-bar"></div>
 
         <div class="cart">Cart({{ cart.length }})</div>
-        <product-display @add-to-cart="updateCart" @remove-from-cart="removeCart"></product-display>
+        <product-display @add-to-cart="updateCart" @remove-from-cart="removeCart" :details="details"></product-display>
         <product-display :premium="premium"></product-display>
-        <product-details :details="details"></product-details>
     </div>
 
     <!-- Import Js -->
